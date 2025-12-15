@@ -13,8 +13,8 @@ function Feedback() {
   const exampleFeedbacks = [
     {
       id: 'FB-001',
-      fullName: 'D.G.C Kedhara',
-      email: 'kedhara@example.com',
+      fullName: 'D.G.C Keshara',
+      email: 'keshara@example.com',
       rating: 5,
       feedback: 'Excellent service! The home sample collection was very convenient and the phlebotomist was professional and punctual. Received my reports within 24 hours as promised. Highly recommend LabCare for all lab test needs.',
       createdAt: '2025-01-15T10:30:00Z'
@@ -37,7 +37,7 @@ function Feedback() {
     },
     {
       id: 'FB-004',
-      fullName: 'Bawantha',
+      fullName: 'Bawantha Dudiranaga',
       email: 'bawantha@example.com',
       rating: 4,
       feedback: 'Very satisfied with the service. The customer support team was helpful when I had questions about my test results. The dashboard feature makes it easy to track all my bookings and reports in one place.',
