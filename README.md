@@ -80,8 +80,9 @@ Traditional lab test booking systems often require physical visits or phone call
 ### 4. **Dashboard**
 
 - Health overview statistics:
-  - Upcoming appointments: 1
+  - Upcoming appointments: 0
   - Available reports: 3
+  - Feedback submitted: 1
   - Satisfaction rate: 98%
 - Quick action buttons
 - Next appointment card display
