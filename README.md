@@ -44,84 +44,86 @@ Traditional lab test booking systems often require physical visits or phone call
 ## ✨ Features Implemented
 
 ### 1. **Authentication System**
-   - User registration with form validation
-   - Simple login system (accepts any credentials for demo purposes)
-   - Session management using React Context API
-   - User profile display in header
-   - Logout functionality
+
+- User registration with form validation
+- Simple login system (accepts any credentials for demo purposes)
+- Session management using React Context API
+- User profile display in header
+- Logout functionality
 
 ### 2. **Home Page**
-   - Welcome page with statistics (10K+ Tests Booked, 500+ Lab Tests, 98% Satisfaction)
-   - Quick action buttons (Book Test, Dashboard)
-   - Hero section with visual elements
-   - Responsive design
+
+- Welcome page with statistics (10K+ Tests Booked, 500+ Lab Tests, 98% Satisfaction)
+- Quick action buttons (Book Test, Dashboard)
+- Hero section with visual elements
+- Responsive design
 
 ### 3. **Test Booking System**
-   - Comprehensive booking form with:
-     - Personal information fields (Name, Contact, Email)
-     - Test type selection with dynamic pricing
-     - Date and time selection
-     - Collection method (Home collection / Walk-in)
-     - Address input for home collection
-     - Notes section
-   - **Dynamic Pricing System**:
-     - Complete Blood Count (CBC): LKR 1,500
-     - Lipid Profile: LKR 2,500
-     - Thyroid Panel: LKR 3,000
-     - COVID-19 PCR: LKR 5,000
-     - Liver Function Test: LKR 2,000
-   - Real-time price display
-   - Total amount calculation
-   - Booking confirmation with navigation
+
+- Comprehensive booking form with:
+  - Personal information fields (Name, Contact, Email)
+  - Test type selection with dynamic pricing
+  - Date and time selection
+  - Collection method (Home collection / Walk-in)
+  - Address input for home collection
+  - Notes section
+- **Dynamic Pricing System**:
+  - Complete Blood Count (CBC): LKR 1,500
+  - Lipid Profile: LKR 2,500
+  - Thyroid Panel: LKR 3,000
+  - COVID-19 PCR: LKR 5,000
+  - Liver Function Test: LKR 2,000
+- Real-time price display
+- Total amount calculation
+- Booking confirmation with navigation
 
 ### 4. **Dashboard**
-   - Health overview statistics:
-     - Upcoming appointments: 1
-     - Available reports: 3
-     - Satisfaction rate: 98%
-   - Quick action buttons
-   - Next appointment card display
-   - Booking history integration
+
+- Health overview statistics:
+  - Upcoming appointments: 1
+  - Available reports: 3
+  - Satisfaction rate: 98%
+- Quick action buttons
+- Next appointment card display
+- Booking history integration
 
 ### 5. **Reports View**
-   - Example reports display (3 reports)
-   - Each report shows:
-     - Report ID
-     - Test type
-     - Sample collection date
-     - Status badge
-     - **Price in LKR**
-   - View and Download buttons for each report
-   - **Total amount paid** section with gradient design
-   - Attractive card-based layout with hover effects
+
+- Example reports display (3 reports)
+- Each report shows:
+  - Report ID
+  - Test type
+  - Sample collection date
+  - Status badge
+  - **Price in LKR**
+- View and Download buttons for each report
+- **Total amount paid** section with gradient design
+- Attractive card-based layout with hover effects
 
 ### 6. **Feedback System**
-   - Feedback form with:
-     - User information
-     - Booking/Report ID (optional)
-     - Rating system (1-5 scale)
-     - Detailed feedback textarea
-   - Form submission handling
-   - Success messages
+
+- Feedback form with:
+  - User information
+  - Booking/Report ID (optional)
+  - Rating system (1-5 scale)
+  - Detailed feedback textarea
+- Form submission handling
+- Success messages
 
 ### 7. **Navigation & UI Components**
-   - Responsive header with context-aware buttons
-   - Dynamic footer (full on home, simplified on other pages)
-   - Modal components for login/registration
-   - Material Symbols icons integration
-   - Consistent color scheme and typography
+
+- Responsive header with context-aware buttons
+- Dynamic footer (full on home, simplified on other pages)
+- Modal components for login/registration
+- Material Symbols icons integration
+- Consistent color scheme and typography
 
 ---
 
 ## 📁 Project Structure
 
 ```
-HomePage/
-├── public/
-│   └── assets/
-│       ├── logo.svg
-│       ├── hero.png
-│       └── doctor.png
+LTBS/
 ├── src/
 │   ├── components/
 │   │   ├── Header.jsx          # Navigation header with auth buttons
@@ -152,12 +154,14 @@ HomePage/
 LAB TEST BOOKING SYSTEM
 
 ### Team Members
+
 - D.G.C Keshara [GWU/HICT/2022/29]
 - W.H.H.P Hettiarachchi [GWU/HICT/2022/04]
 - K.S Prasad [GWU/HICT/2022/02]
 - W.M.B.D Wijethunga [GWU/HICT/2022/67]
 
 ### Project Timeline
+
 - **Start Date**: [2025/11/22]
 - **Completion Date**: [2025/12/15]
 - **Duration**: [23 Days]
