@@ -28,7 +28,10 @@ export function AuthProvider({ children }) {
       createdAt: new Date().toISOString()
     }
     localStorage.setItem('labcare_user', JSON.stringify(newUser))
-    localStorage.setItem('labcare_auth', 'false') // Not logged in yet
+    // After registration, sign the user in for better UX
+    setUser(newUser)
+    setIsAuthenticated(true)
+    localStorage.setItem('labcare_auth', 'true')
     return newUser
   }
 

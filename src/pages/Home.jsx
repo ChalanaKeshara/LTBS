@@ -45,11 +45,11 @@ function Home() {
 
       <div className="hero-visual">
         <div className="hero-image">
-          <img src={heroImage} alt="Lab technician" />
+          <img src={heroImage} alt="Lab technician" loading="lazy" width="640" height="360" />
         </div>
         <div className="result-card">
           <div className="result-thumb">
-            <img src={doctorImage} alt="Doctor" />
+            <img src={doctorImage} alt="Doctor" loading="lazy" width="120" height="120" />
           </div>
           <div className="result-text">
             <p className="result-title">Results Ready!</p>
