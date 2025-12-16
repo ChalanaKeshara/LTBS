@@ -10,6 +10,51 @@ const testPrices = {
   'COVID-19 PCR': 5000,
   'Liver Function Test': 2000
 }
+// Test preparation instructions
+const testPreparations = {
+  'Complete Blood Count (CBC)': {
+    fasting: 'Not required',
+    sample: 'Blood',
+    instructions: [
+      'You may eat and drink normally',
+      'Stay well hydrated',
+      'Inform staff about current medications'
+    ]
+  },
+  'Lipid Profile': {
+    fasting: '8–10 hours required',
+    sample: 'Blood',
+    instructions: [
+      'Fast for 8–10 hours before the test',
+      'Only water is allowed during fasting',
+      'Avoid alcohol for 24 hours'
+    ]
+  },
+  'Thyroid Panel': {
+    fasting: 'Not required',
+    sample: 'Blood',
+    instructions: [
+      'No fasting needed',
+      'Take medications only if advised by your doctor'
+    ]
+  },
+  'COVID-19 PCR': {
+    fasting: 'Not required',
+    sample: 'Nasal/Throat swab',
+    instructions: [
+      'Avoid eating or drinking 30 minutes before the test',
+      'Wear a mask when visiting the lab'
+    ]
+  },
+  'Liver Function Test': {
+    fasting: '8 hours recommended',
+    sample: 'Blood',
+    instructions: [
+      'Fast for 8 hours before the test',
+      'Avoid alcohol for 24 hours'
+    ]
+  }
+}
 
 function TestBooking() {
   const navigate = useNavigate()
@@ -105,6 +150,7 @@ function TestBooking() {
                 <option value="COVID-19 PCR">COVID-19 PCR</option>
                 <option value="Liver Function Test">Liver Function Test</option>
               </select>
+
               {selectedPrice > 0 && (
                 <div style={{ 
                   marginTop: '8px', 
@@ -113,6 +159,30 @@ function TestBooking() {
                   color: '#2162ff' 
                 }}>
                   Price: LKR {selectedPrice.toLocaleString('en-US')}
+                </div>
+              )}
+
+              {selectedTestType && testPreparations[selectedTestType] && (
+                <div style={{
+                  marginTop: '12px',
+                  padding: '14px',
+                  backgroundColor: '#f9fafb',
+                  border: '1px solid #e5e7eb',
+                  borderRadius: '8px',
+                  fontSize: '14px'
+                }}>
+                  <strong style={{ color: '#2162ff' }}>Test Preparation</strong>
+                  <p style={{ marginTop: '6px' }}>
+                    <b>Sample:</b> {testPreparations[selectedTestType].sample}
+                  </p>
+                  <p>
+                    <b>Fasting:</b> {testPreparations[selectedTestType].fasting}
+                  </p>
+                  <ul style={{ paddingLeft: '18px', marginTop: '6px' }}>
+                    {testPreparations[selectedTestType].instructions.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
                 </div>
               )}
             </label>
