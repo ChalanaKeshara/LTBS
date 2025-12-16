@@ -107,7 +107,7 @@ function Dashboard() {
         {bookings.length > 0 && bookings[0] ? (
           <div className="result-card" style={{ position: 'static', boxShadow: '0 10px 20px rgba(0,0,0,0.15)', width: '100%' }}>
             <div className="result-thumb">
-              <img src={doctorImage} alt="Doctor" />
+              <img src={doctorImage} alt="Doctor" loading="lazy" width="96" height="96" />
             </div>
             <div className="result-text">
               <p className="result-title">Next visit</p>
@@ -119,7 +119,7 @@ function Dashboard() {
         ) : (
           <div className="result-card" style={{ position: 'static', boxShadow: '0 10px 20px rgba(0,0,0,0.15)', width: '100%' }}>
             <div className="result-thumb">
-              <img src={doctorImage} alt="Doctor" />
+              <img src={doctorImage} alt="Doctor" loading="lazy" width="96" height="96" />
             </div>
             <div className="result-text">
               <p className="result-title">No upcoming bookings</p>

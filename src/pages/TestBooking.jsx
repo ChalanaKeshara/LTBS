@@ -17,6 +17,7 @@ function TestBooking() {
   const [successMessage, setSuccessMessage] = React.useState('')
   const [selectedTestType, setSelectedTestType] = React.useState('')
   const [selectedPrice, setSelectedPrice] = React.useState(0)
+  const [collectionMethod, setCollectionMethod] = React.useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -28,8 +29,8 @@ function TestBooking() {
     }
 
     const formData = new FormData(e.target)
-    const testType = formData.get('testType')
-    const price = testPrices[testType] || 0
+    const testType = formData.get('testType') || selectedTestType
+    const price = testPrices[testType] || selectedPrice || 0
     
     const bookingData = {
       id: `LBC-${Date.now()}`,
@@ -40,7 +41,7 @@ function TestBooking() {
       price: price,
       preferredDate: formData.get('preferredDate'),
       preferredTime: formData.get('preferredTime'),
-      collectionMethod: formData.get('collectionMethod'),
+      collectionMethod: formData.get('collectionMethod') || collectionMethod,
       address: formData.get('address'),
       notes: formData.get('notes'),
       status: 'Scheduled',
@@ -58,9 +59,15 @@ function TestBooking() {
       e.target.reset()
       setSelectedTestType('')
       setSelectedPrice(0)
+      setCollectionMethod('')
       navigate('/dashboard')
     }, 1500)
   }
+
+  React.useEffect(() => {
+    // keep selectedPrice in sync when test type changes
+    setSelectedPrice(testPrices[selectedTestType] || 0)
+  }, [selectedTestType])
 
   return (
     <main className="hero">
@@ -74,48 +81,46 @@ function TestBooking() {
       <div className="hero-visual" style={{ justifyContent: 'flex-start' }}>
         <form className="form-card" onSubmit={handleSubmit}>
           <div className="form-grid">
-            <label>
+            <label htmlFor="fullName">
               Full Name
-              <input type="text" name="fullName" placeholder="John Doe" required />
             </label>
-            <label>
-              Contact Number
-              <input type="tel" name="contactNumber" placeholder="+94 771234567" required />
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" placeholder="you@example.com" required />
-            </label>
-            <label>
-              Test Type
-              <select 
-                name="testType" 
-                required
-                value={selectedTestType}
-                onChange={(e) => {
-                  const testType = e.target.value
-                  setSelectedTestType(testType)
-                  setSelectedPrice(testPrices[testType] || 0)
-                }}
-              >
-                <option value="">Select a test</option>
-                <option value="Complete Blood Count (CBC)">Complete Blood Count (CBC)</option>
-                <option value="Lipid Profile">Lipid Profile</option>
-                <option value="Thyroid Panel">Thyroid Panel</option>
-                <option value="COVID-19 PCR">COVID-19 PCR</option>
-                <option value="Liver Function Test">Liver Function Test</option>
-              </select>
-              {selectedPrice > 0 && (
-                <div style={{ 
-                  marginTop: '8px', 
-                  fontSize: '16px', 
-                  fontWeight: 700, 
-                  color: '#2162ff' 
-                }}>
-                  Price: LKR {selectedPrice.toLocaleString('en-US')}
-                </div>
-              )}
-            </label>
+            <input id="fullName" type="text" name="fullName" placeholder="John Doe" required />
+
+            <label htmlFor="contactNumber">Contact Number</label>
+            <input id="contactNumber" type="tel" name="contactNumber" placeholder="+94 771234567" required />
+
+            <label htmlFor="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="you@example.com" required />
+
+            <label htmlFor="testType">Test Type</label>
+            <select 
+              id="testType"
+              name="testType" 
+              required
+              value={selectedTestType}
+              onChange={(e) => {
+                const testType = e.target.value
+                setSelectedTestType(testType)
+                setSelectedPrice(testPrices[testType] || 0)
+              }}
+            >
+              <option value="">Select a test</option>
+              <option value="Complete Blood Count (CBC)">Complete Blood Count (CBC)</option>
+              <option value="Lipid Profile">Lipid Profile</option>
+              <option value="Thyroid Panel">Thyroid Panel</option>
+              <option value="COVID-19 PCR">COVID-19 PCR</option>
+              <option value="Liver Function Test">Liver Function Test</option>
+            </select>
+            {selectedPrice > 0 && (
+              <div style={{ 
+                marginTop: '8px', 
+                fontSize: '16px', 
+                fontWeight: 700, 
+                color: '#2162ff' 
+              }}>
+                Price: LKR {selectedPrice.toLocaleString('en-US')}
+              </div>
+            )}
             <label>
               Preferred Date
               <input type="date" name="preferredDate" required />
@@ -126,7 +131,13 @@ function TestBooking() {
             </label>
             <label>
               Collection Method
-              <select name="collectionMethod" required>
+              <select
+                id="collectionMethod"
+                name="collectionMethod"
+                required
+                value={collectionMethod}
+                onChange={(e) => setCollectionMethod(e.target.value)}
+              >
                 <option value="">Select</option>
                 <option>Home Sample Collection</option>
                 <option>Walk-in at Lab</option>
@@ -134,7 +145,7 @@ function TestBooking() {
             </label>
             <label>
               Address (for home collection)
-              <input type="text" name="address" placeholder="Street, City" />
+              <input id="address" type="text" name="address" placeholder="Street, City" required={collectionMethod === 'Home Sample Collection'} />
             </label>
             <label className="full-width">
               Notes
