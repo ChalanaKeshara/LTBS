@@ -121,36 +121,30 @@ function TestBooking() {
                 Price: LKR {selectedPrice.toLocaleString('en-US')}
               </div>
             )}
-            <label>
-              Preferred Date
-              <input type="date" name="preferredDate" required />
-            </label>
-            <label>
-              Preferred Time
-              <input type="time" name="preferredTime" required />
-            </label>
-            <label>
-              Collection Method
-              <select
-                id="collectionMethod"
-                name="collectionMethod"
-                required
-                value={collectionMethod}
-                onChange={(e) => setCollectionMethod(e.target.value)}
-              >
-                <option value="">Select</option>
-                <option>Home Sample Collection</option>
-                <option>Walk-in at Lab</option>
-              </select>
-            </label>
-            <label>
-              Address (for home collection)
-              <input id="address" type="text" name="address" placeholder="Street, City" required={collectionMethod === 'Home Sample Collection'} />
-            </label>
-            <label className="full-width">
-              Notes
-              <textarea name="notes" rows="3" placeholder="Any special instructions"></textarea>
-            </label>
+            <label htmlFor="preferredDate">Preferred Date</label>
+            <input id="preferredDate" type="date" name="preferredDate" required />
+
+            <label htmlFor="preferredTime">Preferred Time</label>
+            <input id="preferredTime" type="time" name="preferredTime" required />
+
+            <label htmlFor="collectionMethod">Collection Method</label>
+            <select
+              id="collectionMethod"
+              name="collectionMethod"
+              required
+              value={collectionMethod}
+              onChange={(e) => setCollectionMethod(e.target.value)}
+            >
+              <option value="">Select</option>
+              <option>Home Sample Collection</option>
+              <option>Walk-in at Lab</option>
+            </select>
+
+            <label htmlFor="address">Address (for home collection)</label>
+            <input id="address" type="text" name="address" placeholder="Street, City" required={collectionMethod === 'Home Sample Collection'} />
+
+            <label htmlFor="notes" className="full-width">Notes</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Any special instructions"></textarea>
             {selectedPrice > 0 && (
               <div className="full-width" style={{
                 padding: '16px',
