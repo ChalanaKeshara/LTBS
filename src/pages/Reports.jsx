@@ -336,7 +336,7 @@ function Reports() {
                 </div>
               </div>
               <div style={{
-                fontSize: '48px',
+                fontSize: '40px',
                 opacity: 0.2
               }}>
                 <span className="material-symbols-outlined">receipt_long</span>
@@ -359,4 +359,3 @@ function Reports() {
 }
 
 export default Reports
-
