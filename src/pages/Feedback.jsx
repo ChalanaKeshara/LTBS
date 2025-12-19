@@ -31,7 +31,7 @@ function Feedback() {
       id: 'FB-003',
       fullName: 'Samidu',
       email: 'samidu@example.com',
-      rating: 5,
+      rating: 3,
       feedback: 'Outstanding service! The online booking system is user-friendly and the home collection service saved me a lot of time. The reports came quickly via email and were very detailed. Will definitely use LabCare again.',
       createdAt: '2025-01-13T09:15:00Z'
     },
@@ -40,7 +40,7 @@ function Feedback() {
       fullName: 'Bawantha Dudiranaga',
       email: 'bawantha@example.com',
       rating: 4,
-      feedback: 'Very satisfied with the service. The customer support team was helpful when I had questions about my test results. The dashboard feature makes it easy to track all my bookings and reports in one place.',
+      feedback: 'Very satisfied with the service. The customer support team was helpful when I had questions about my test results. The dashboard feature makes it easy to track all my bookings and reports in one place. Thank you so mush guys for the great service!',
       createdAt: '2025-01-12T16:45:00Z'
     }
   ]
