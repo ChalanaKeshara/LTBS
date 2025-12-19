@@ -15,7 +15,7 @@ a {
 }
 
 .page {
-  max-width: 1440px;
+  max-width: 1439px;
   min-height: 100vh;
   margin: 0 auto;
   padding: 16px 32px 32px;
@@ -139,14 +139,14 @@ button.btn {
 .kicker {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  font-size: 64px;
+  font-size: 63px;
   font-weight: 700;
 }
 
 .headline {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  font-size: 64px;
+  font-size: 63px;
   font-weight: 700;
   color: #2162ff;
   line-height: 1.1;
@@ -155,7 +155,7 @@ button.btn {
 .subhead {
   margin: 0 0 8px;
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   color: #444;
 }
@@ -183,21 +183,21 @@ button.btn {
 
 .stat-title {
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   color: #aeaeb2;
 }
 
 .stat-number {
   font-family: 'Roboto', sans-serif;
-  font-size: 28px;
+  font-size: 27px;
   font-weight: 700;
   color: #000;
 }
 
 .stat-label {
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   color: #aeaeb2;
 }
@@ -403,7 +403,7 @@ button.btn {
 .footer-about p {
   margin: 12px 0 0;
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 200;
   color: #fff;
 }
