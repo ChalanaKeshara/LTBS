@@ -7,7 +7,7 @@ function Home() {
   return (
     <main className="hero">
       <div className="hero-copy">
-        <p className="kicker">Your Health,</p>
+        <p className="kicker">Your Health</p>
         <h1 className="headline">Just a Click Away</h1>
         <p className="subhead">
           Book lab tests online, get home sample collection...
