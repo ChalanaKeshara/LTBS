@@ -8,11 +8,11 @@
 
 ## 📋 Table of Contents
 
-1. [ProjectOverview]
-2. [Objectives]
-3. [FeaturesImplemented]
-4. [ProjectStructure]
-5. [Contributors]
+1. ProjectOverview
+2. Objectives
+3. FeaturesImplemented
+4. ProjectStructure
+5. Contributors
 
 ---
 
@@ -67,12 +67,14 @@ Traditional lab test booking systems often require physical visits or phone call
   - Collection method (Home collection / Walk-in)
   - Address input for home collection
   - Notes section
-- **Dynamic Pricing System**:
+             ** Dynamic Pricing System**:
   - Complete Blood Count (CBC): LKR 1,500
   - Lipid Profile: LKR 2,500
   - Thyroid Panel: LKR 3,000
   - COVID-19 PCR: LKR 5,000
   - Liver Function Test: LKR 2,000
+  - When a test is selected, its price is added to the real-time total.
+  -Multiple selections allowed.
 - Real-time price display
 - Total amount calculation
 - Booking confirmation with navigation
@@ -108,6 +110,7 @@ Traditional lab test booking systems often require physical visits or phone call
   - Booking/Report ID (optional)
   - Rating system (1-5 scale)
   - Detailed feedback textarea
+  - SMS/Email Notifications: Confirmation + reminders before test
 - Form submission handling
 - Success messages
 
@@ -137,7 +140,7 @@ LTBS/
 │   │   ├── Home.jsx             # Home page component
 │   │   ├── TestBooking.jsx      # Test booking page with pricing
 │   │   ├── Dashboard.jsx       # User dashboard
-│   │   ├── Reports.jsx          # Reports view with pricing
+│   │   ├── Reports.jsx          
 │   │   └── Feedback.jsx          # Feedback submission page
 │   ├── App.jsx                  # Main app component with routing
 │   ├── main.jsx                 # React entry point
