@@ -22,10 +22,10 @@ const testPreparations = {
     ]
   },
   'Lipid Profile': {
-    fasting: '8–10 hours required',
+    fasting: '8–12 hours required',
     sample: 'Blood',
     instructions: [
-      'Fast for 8–10 hours before the test',
+      'Fast for 8–12 hours before the test',
       'Only water is allowed during fasting',
       'Avoid alcohol for 24 hours'
     ]
